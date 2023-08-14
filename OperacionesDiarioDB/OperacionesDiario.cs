@@ -1,15 +1,20 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Text.Json;
+using ZstdSharp.Unsafe;
 
 namespace OperacionesDiarioDB
 {
     public static class OperacionDiarioDB
     {
+        private static string _cs = "";
+
         public static List<string> GetOperaciones()
         {
 
-            MongoClient dbClient = new MongoClient(@"mongodb://gesfarmdb:8ep1jMo3OQ9R9rAQ1onosSjgdk0NwBBDURNNK55KsfjJWTcEF2KFMJDKzIWRAYXF7G2yoNdu5uw6ACDbH6lwWw==@gesfarmdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@gesfarmdb@");
+
+
+            MongoClient dbClient = new MongoClient(_cs);
 
             var database = dbClient.GetDatabase("farmadata");
             var collection = database.GetCollection<BsonDocument>("OperacionesDiario");
@@ -39,7 +44,7 @@ namespace OperacionesDiarioDB
         {
 
 
-            MongoClient dbClient = new MongoClient(@"mongodb://gesfarmdb:8ep1jMo3OQ9R9rAQ1onosSjgdk0NwBBDURNNK55KsfjJWTcEF2KFMJDKzIWRAYXF7G2yoNdu5uw6ACDbH6lwWw==@gesfarmdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@gesfarmdb@");
+            MongoClient dbClient = new MongoClient(_cs);
 
             var database = dbClient.GetDatabase("farmadata");
             var collection = database.GetCollection<BsonDocument>("OperacionesDiario");
@@ -56,7 +61,7 @@ namespace OperacionesDiarioDB
         {
 
 
-            MongoClient dbClient = new MongoClient(@"mongodb://gesfarmdb:8ep1jMo3OQ9R9rAQ1onosSjgdk0NwBBDURNNK55KsfjJWTcEF2KFMJDKzIWRAYXF7G2yoNdu5uw6ACDbH6lwWw==@gesfarmdb.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&replicaSet=globaldb&maxIdleTimeMS=120000&appName=@gesfarmdb@");
+            MongoClient dbClient = new MongoClient(_cs);
 
             var database = dbClient.GetDatabase("farmadata");
             var collection = database.GetCollection<BsonDocument>("OperacionesDiario");
