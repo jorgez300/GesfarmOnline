@@ -7,6 +7,7 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.1.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Inventario\Inventario.csproj" />
     <ProjectReference Include="..\OperacionesDiarioModelo\OperacionesDiarioModelo.csproj" />
   </ItemGroup>
   <ItemGroup>
