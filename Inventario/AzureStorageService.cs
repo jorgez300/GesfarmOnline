@@ -12,7 +12,7 @@ namespace StorageService
         private readonly string _container = "farmafd";
 
 
-        private readonly string _connectionString = "DefaultEndpointsProtocol=https;AccountName=almcomp;AccountKey=nO4S0uqzMORwaa0a1hU1zDYMfKStUqAplXloykh7XIxjqOY+bYZpPJaYgXkGgyac7OwQjUcgFOky+AStcyDVHA==;EndpointSuffix=core.windows.net";
+        private readonly string _connectionString = "";
 
 
 
